@@ -1,0 +1,8 @@
+Index: org/jsoup/parser/TokeniserState.java
+===========================================
+++ org/jsoup/parser/TokeniserState.java
+-- org/jsoup/parser/TokeniserState.java
+@@ -558,2 +558,1 @@
+                 t.dataBuffer.append(name);                                                                                      
+-                r.advance();                                                                                                    
+                 return; 

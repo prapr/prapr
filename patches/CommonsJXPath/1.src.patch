@@ -1,0 +1,11 @@
+Index: org/apache/commons/jxpath/ri/axes/ChildContext.java
+==========================================================
+++ org/apache/commons/jxpath/ri/axes/ChildContext.java
+-- org/apache/commons/jxpath/ri/axes/ChildContext.java
+@@ -111,5 +111,4 @@
+         }                                                                                                                       
+         NodePointer useParent = startFromParentLocation ? parent.getParent() : parent;                                          
++        iterator = useParent==null ? null : useParent.childIterator(nodeTest,reverse,startFromParentLocation ? parent : null);
+-        iterator = useParent.childIterator(nodeTest, reverse,                                                                   
+-                startFromParentLocation ? parent : null);                                                                       
+     }

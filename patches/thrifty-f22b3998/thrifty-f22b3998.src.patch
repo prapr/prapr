@@ -1,0 +1,9 @@
+Index: com/bendb/thrifty/schema/parser/ThriftParser.java
+========================================================
+-- com/bendb/thrifty/schema/parser/ThriftParser.java
+++ com/bendb/thrifty/schema/parser/ThriftParser.java
+@@ -245,2 +245,2 @@
+                value = member.value();
+-               nextId = Math.max(nextId, value) + 1;
++               nextId = value + 1;
+            }

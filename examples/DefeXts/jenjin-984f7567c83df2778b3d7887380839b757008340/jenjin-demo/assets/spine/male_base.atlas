@@ -1,0 +1,118 @@
+
+male_base.png
+size: 256,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+head
+  rotate: false
+  xy: 126, 30
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+hips
+  rotate: false
+  xy: 68, 2
+  size: 32, 24
+  orig: 32, 24
+  offset: 0, 0
+  index: -1
+left_foot
+  rotate: false
+  xy: 206, 44
+  size: 28, 8
+  orig: 28, 8
+  offset: 0, 0
+  index: -1
+left_hand
+  rotate: true
+  xy: 52, 4
+  size: 8, 12
+  orig: 8, 12
+  offset: 0, 0
+  index: -1
+left_lower_arm
+  rotate: true
+  xy: 194, 28
+  size: 4, 28
+  orig: 4, 28
+  offset: 0, 0
+  index: -1
+right_lower_arm
+  rotate: true
+  xy: 194, 28
+  size: 4, 28
+  orig: 4, 28
+  offset: 0, 0
+  index: -1
+left_shin
+  rotate: true
+  xy: 210, 54
+  size: 8, 44
+  orig: 8, 44
+  offset: 0, 0
+  index: -1
+left_thigh
+  rotate: true
+  xy: 68, 46
+  size: 16, 56
+  orig: 16, 56
+  offset: 0, 0
+  index: -1
+left_upper_arm
+  rotate: true
+  xy: 2, 4
+  size: 8, 48
+  orig: 8, 48
+  offset: 0, 0
+  index: -1
+neck
+  rotate: true
+  xy: 160, 26
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+right_foot
+  rotate: false
+  xy: 194, 34
+  size: 28, 8
+  orig: 28, 8
+  offset: 0, 0
+  index: -1
+right_hand
+  rotate: false
+  xy: 102, 14
+  size: 8, 12
+  orig: 8, 12
+  offset: 0, 0
+  index: -1
+right_shin
+  rotate: true
+  xy: 160, 44
+  size: 8, 44
+  orig: 8, 44
+  offset: 0, 0
+  index: -1
+right_thigh
+  rotate: true
+  xy: 68, 28
+  size: 16, 56
+  orig: 16, 56
+  offset: 0, 0
+  index: -1
+right_upper_arm
+  rotate: true
+  xy: 160, 54
+  size: 8, 48
+  orig: 8, 48
+  offset: 0, 0
+  index: -1
+torso
+  rotate: true
+  xy: 2, 14
+  size: 48, 64
+  orig: 48, 64
+  offset: 0, 0
+  index: -1

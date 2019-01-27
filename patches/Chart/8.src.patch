@@ -1,0 +1,10 @@
+Index: org/jfree/data/time/Week.java
+====================================
+++ org/jfree/data/time/Week.java
+-- org/jfree/data/time/Week.java
+@@ +175,8 -175,8 @@
+       // defer argument checking...                                                                                                                                                   
+
++        this(time, zone, Locale.getDefault());
+-        this(time, RegularTimePeriod.DEFAULT_TIME_ZONE, Locale.getDefault());
+    }

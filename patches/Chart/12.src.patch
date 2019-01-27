@@ -1,0 +1,9 @@
+Index: org/jfree/chart/plot/MultiplePiePlot.java
+================================================
+++ org/jfree/chart/plot/MultiplePiePlot.java
+-- org/jfree/chart/plot/MultiplePiePlot.java
+@@ +145,8 -145,8 @@
+	super();
++       this.setDataset(dataset);
+-       this.dataset = dataset;
+        PiePlot piePlot = new PiePlot(null);

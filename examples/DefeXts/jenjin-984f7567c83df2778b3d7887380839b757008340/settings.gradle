@@ -1,0 +1,4 @@
+include 'jenjin-core'
+include 'jenjin-demo'
+include 'jenjin-spine'
+

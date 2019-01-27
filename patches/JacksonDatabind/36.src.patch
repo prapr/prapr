@@ -1,0 +1,11 @@
+Index: com/fasterxml/jackson/databind/ser/std/NumberSerializer.java
+===================================================================
+++ com/fasterxml/jackson/databind/ser/std/NumberSerializer.java
+-- com/fasterxml/jackson/databind/ser/std/NumberSerializer.java
+@@ -79,4 +79,4 @@
+             Class<?> h = handledType();                                                                                         
+             if (h == BigDecimal.class) {                                                                                        
++                visitFloatFormat(visitor, typeHint, JsonParser.NumberType.BIG_DECIMAL);                                         
+-                visitFloatFormat(visitor, typeHint, JsonParser.NumberType.BIG_INTEGER);                                         
+             } else {                                                                                                            
+                 // otherwise bit unclear what to call... but let's try:

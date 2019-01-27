@@ -1,0 +1,12 @@
+Index: com/google/javascript/jscomp/CodeGenerator.java
+======================================================
+++ com/google/javascript/jscomp/CodeGenerator.java
+-- com/google/javascript/jscomp/CodeGenerator.java
+@@ +1045,7 -1045,7 @@
+
+            // check is measurably faster than using the CharsetEncoder.    
++	   if (c > 31 && c < 127) {                                                      
+-          if (c > 0x1f && c <= 0x7f) {
+              sb.append(c);
+
+

@@ -1,0 +1,10 @@
+Index: com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java
+========================================================================
+++ com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java
+-- com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java
+@@ -493,4 +493,4 @@
+             builder.setIgnoreUnknownProperties(ignoreAny);                                                                      
+             // Or explicit/implicit definitions?                                                                                
++            ignored = ignorals.findIgnoredForDeserialization();                                                                 
+-            ignored = ignorals.getIgnored();                                                                                    
+             for (String propName : ignored) {

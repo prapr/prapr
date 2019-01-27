@@ -1,0 +1,9 @@
+Index: org/luxons/sevenwonders/game/cards/HandRotationDirection.java
+====================================================================
+-- org/luxons/sevenwonders/game/cards/HandRotationDirection.java
+++ org/luxons/sevenwonders/game/cards/HandRotationDirection.java
+@@ -17,2 +17,2 @@
+        // clockwise at age 1, and alternating
+-       return age % 2 == 0 ? HandRotationDirection.LEFT : HandRotationDirection.RIGHT;
++       return age % 2 == 0 ? HandRotationDirection.RIGHT : HandRotationDirection.LEFT;
+    }

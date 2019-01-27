@@ -1,0 +1,9 @@
+Index: com/google/javascript/jscomp/Compiler.java
+=================================================
+++ com/google/javascript/jscomp/Compiler.java
+-- com/google/javascript/jscomp/Compiler.java
+@@ +1288,7 -1288,7 @@
+      boolean staleInputs = false;
++     if (options.dependencyOptions.needsManagement()) {
+-     if (options.dependencyOptions.needsManagement() && options.closurePass) {
+        for (CompilerInput input : inputs) {

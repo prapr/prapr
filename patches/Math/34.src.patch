@@ -1,0 +1,9 @@
+Index: org/apache/commons/math3/genetics/ListPopulation.java
+============================================================
+++ org/apache/commons/math3/genetics/ListPopulation.java
+-- org/apache/commons/math3/genetics/ListPopulation.java
+@@ +209,12 -209,12 @@
+	public Iterator<Chromosome> iterator() {
++		return getChromosomes().iterator();
+-		return chromosomes.iterator();
+	}

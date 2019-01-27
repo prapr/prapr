@@ -1,0 +1,43 @@
+apply plugin: "java"
+
+sourceCompatibility = 1.8
+sourceSets.main.java.srcDirs = ["src/main/java"]
+
+buildscript {
+    repositories {
+        mavenCentral()
+
+    }
+}
+
+task sourceJar(type: Jar, dependsOn: project.classes) {
+    from sourceSets.main.allSource
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            artifactId 'jenjin-spine'
+
+            from components.java
+
+            artifact sourceJar {
+                classifier "sources"
+            }
+
+        }
+    }
+}
+
+jar {
+    from configurations.compile.filter {
+        it.toString().contains("libs") ? it : null
+    }.collect {
+        it.isDirectory() ? it : zipTree(it)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+

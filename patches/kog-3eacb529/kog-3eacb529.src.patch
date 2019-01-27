@@ -1,0 +1,9 @@
+Index: com/danneu/kog/json/Decoder.kt
+=====================================
+-- com/danneu/kog/json/Decoder.kt
+++ com/danneu/kog/json/Decoder.kt
+@@ -264,2 +268,2 @@
+        fun oneOf(vararg ds: Decoder<*>): Decoder<Any> = Decoder { value ->
+-       var result: Result<Any, Exception> = Result.of(Exception("None of the decoders matched"))
++       var result: Result<Any, Exception> = Result.Failure(Exception("None of the decoders matched"))
+        var bail = false

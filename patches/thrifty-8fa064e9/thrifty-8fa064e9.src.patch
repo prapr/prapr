@@ -1,0 +1,9 @@
+Index: com/bendb/thrifty/schema/Linker.java
+===========================================
+-- com/bendb/thrifty/schema/Linker.java
+++ com/bendb/thrifty/schema/Linker.java
+@@ -143,2 +143,2 @@
+                    iter.remove();
+-               } catch (TypedefResolutionException ignored) {
++               } catch (LinkFailureException ignored) {
+                }

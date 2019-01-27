@@ -1,0 +1,12 @@
+Index: com/google/javascript/jscomp/TypedScopeCreator.java
+==========================================================
+++ com/google/javascript/jscomp/TypedScopeCreator.java
+-- com/google/javascript/jscomp/TypedScopeCreator.java
+@@ +1742,7 -1742,7 @@
+
+            if (jsDocParameter != null) {
++             defineSlot(astParameter, functionNode, jsDocParameter.getJSType(), false); 
+-             defineSlot(astParameter, functionNode,
+-                        jsDocParameter.getJSType(), true);
+              jsDocParameter = jsDocParameter.getNext();
+

@@ -1,0 +1,11 @@
+Index: com/google/javascript/jscomp/Compiler.java
+=================================================
+++ com/google/javascript/jscomp/Compiler.java
+-- com/google/javascript/jscomp/Compiler.java
+@@ +1284,8 -1284,8 @@
+
+      // Check if the sources need to be re-ordered.                                                                             
+       if (options.dependencyOptions.needsManagement() &&
+-        !options.skipAllPasses &&
+          options.closurePass) {
+        for (CompilerInput input : inputs) {

@@ -1,0 +1,10 @@
+Input: org/apache/commons/lang3/ClassUtils.java
+===============================================
+++ org/apache/commons/lang3/ClassUtils.java
+-- org/apache/commons/lang3/ClassUtils.java
+@@ +910,12 -910,12 @@
+
+	for (int i = 0; i < array.length; i++) {
++		classes[i] = array[i] == null ? null : array[i].getClass();
+-		classes[i] = array[i].getClass();
+        }

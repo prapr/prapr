@@ -1,0 +1,11 @@
+Input: org/apache/commons/lang/LocaleUtils.java
+===============================================
+++ org/apache/commons/lang/LocaleUtils.java
+-- org/apache/commons/lang/LocaleUtils.java
+@@ +223,8 -223,8 @@
+
+    public static boolean isAvailableLocale(Locale locale) {
++	return availableLocaleSet().contains(locale);
+-       return cAvailableLocaleSet.contains(locale);
+    }
+

@@ -1,0 +1,9 @@
+Index: com/binarymonks/jj/core/components/Component.kt
+======================================================
+-- com/binarymonks/jj/core/components/Component.kt
+++ com/binarymonks/jj/core/components/Component.kt
+@@ -21,2 +21,2 @@
+            // Set all the property override fields to use the parent scene as property source.
+-           this::class.declaredMemberProperties.forEach {
++           this::class.memberProperties.forEach {
+                if (it.returnType.isSubtypeOf(PROP_OVERRIDE_TYPE)) {

@@ -1,0 +1,10 @@
+Index: org/joda/time/Partial.java
+=================================
+++ org/joda/time/Partial.java
+-- org/joda/time/Partial.java
+@@ +464,11 -464,11 @@
+
+            // this isn't overly efficient, but is safe
++	    Partial newPartial = new Partial(newTypes, newValues, iChronology);                                                  
+-           Partial newPartial = new Partial(iChronology, newTypes, newValues);
+            System.out.println(newPartial.toString());

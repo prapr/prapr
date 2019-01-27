@@ -1,0 +1,11 @@
+Include: com/google/javascript/rhino/jstype/RecordType.java
+===========================================================
+++ com/google/javascript/rhino/jstype/RecordType.java
+-- com/google/javascript/rhino/jstype/RecordType.java
+@@ +142,4 -142,4 @@
+ public JSType getLeastSupertype(JSType that) {
++   if (true) {
+-   if (!that.isRecordType()) {
+      return super.getLeastSupertype(that);
+
+

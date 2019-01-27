@@ -1,0 +1,9 @@
+Index: org/apache/commons/math/analysis/solvers/UnivariateRealSolverUtils.java
+==============================================================================
+++ org/apache/commons/math/analysis/solvers/UnivariateRealSolverUtils.java
+-- org/apache/commons/math/analysis/solvers/UnivariateRealSolverUtils.java
+@@ +198,7 -198,7 @@
+
+                                                                                                                                 
++        if (fa * fb > 0.0 ) {                                                                                                   
+-        if (fa * fb >= 0.0 ) {

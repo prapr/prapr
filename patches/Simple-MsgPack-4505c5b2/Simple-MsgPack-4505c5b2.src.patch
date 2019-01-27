@@ -1,0 +1,9 @@
+Index: ch/dissem/msgpack/types/MPString.java
+============================================
+-- ch/dissem/msgpack/types/MPString.java
+++ ch/dissem/msgpack/types/MPString.java
+@@ -149,3 +149,3 @@
+			String hex = Integer.toHexString(c);
+-   	  	 	for (int j = 0; j - hex.length() < 4; j++) {
++                       for (int j = 0; j + hex.length() < 4; j++) {
+                            result.append('0');

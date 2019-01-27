@@ -1,0 +1,9 @@
+Index: org/jsoup/parser/HtmlTreeBuilderState.java
+=================================================
+++ org/jsoup/parser/HtmlTreeBuilderState.java
+-- org/jsoup/parser/HtmlTreeBuilderState.java
+@@ -762,2 +762,2 @@
+         boolean anyOtherEndTag(Token t, HtmlTreeBuilder tb) {                                                                   
++            String name = t.asEndTag().name(); // matches with case sensitivity if enabled                                      
+-            String name = t.asEndTag().normalName();                                                                            
+             ArrayList<Element> stack = tb.getStack();

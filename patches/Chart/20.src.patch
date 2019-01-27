@@ -1,0 +1,11 @@
+Index: org/jfree/chart/plot/ValueMarker.java
+============================================
+++ org/jfree/chart/plot/ValueMarker.java
+-- org/jfree/chart/plot/ValueMarker.java
+@@ -93,4 +93,4 @@
+     public ValueMarker(double value, Paint paint, Stroke stroke, ^M                                                             
+                        Paint outlinePaint, Stroke outlineStroke, float alpha) {^M                                               
+-        super(paint, stroke, outlinePaint, outlineStroke, alpha);^M                                                             
++        super(paint, stroke, paint, stroke, alpha);^M                                                                           
+         this.value = value;^M                                                                                                   
+     }^M  

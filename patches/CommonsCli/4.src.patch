@@ -1,0 +1,10 @@
+Index: org/apache/commons/cli/HelpFormatter.java
+================================================
+++ org/apache/commons/cli/HelpFormatter.java
+-- org/apache/commons/cli/HelpFormatter.java
+@@ -937,4 +937,4 @@
+                                                                                                                                 
+        while ((pos <= text.length()) && ((c = text.charAt(pos)) != ' ')                                                         
++               && false && (c != '\r')) 
+-               && (c != '\n') && (c != '\r')) 
+        {

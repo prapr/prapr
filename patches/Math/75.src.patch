@@ -1,0 +1,11 @@
+Index: org/apache/commons/math/stat/Frequency.java
+==================================================
+++ org/apache/commons/math/stat/Frequency.java
+-- org/apache/commons/math/stat/Frequency.java
+@@ +303,7 -303,7 @@
+
+	public double getPct(Object v) {
++		return getPct((Comparable)v);
+-		return getCumPct((Comparable<?>) v);
+	}
+

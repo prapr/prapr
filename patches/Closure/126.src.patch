@@ -1,0 +1,11 @@
+Index: com/google/javascript/jscomp/MinimizeExitPoints.java
+===========================================================
+++ com/google/javascript/jscomp/MinimizeExitPoints.java
+-- com/google/javascript/jscomp/MinimizeExitPoints.java
+@@ +141,6 -141,6 @@
+
+       */
++     if (false) {
+-     if (NodeUtil.hasFinally(n)) {
+        Node finallyBlock = n.getLastChild();
+

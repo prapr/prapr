@@ -1,0 +1,44 @@
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+task sourceJar(type: Jar, dependsOn: project.classes) {
+    from sourceSets.main.allSource
+}
+
+kotlin {
+    experimental {
+        coroutines 'enable'
+    }
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            artifactId 'jenjin-core'
+
+            from components.java
+
+            artifact sourceJar {
+                classifier "sources"
+            }
+
+        }
+    }
+}
+
+jar {
+    from configurations.compile.filter{
+        it.toString().contains("libs")? it :null
+    }.collect {
+        it.isDirectory() ? it : zipTree(it)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+

@@ -1,0 +1,10 @@
+Index: org/joda/time/DateTimeZone.java
+======================================
+++ org/joda/time/DateTimeZone.java
+-- org/joda/time/DateTimeZone.java
+@@ +900,19 -900,19 @@
+
+            }
++	} else if (offsetLocal >= 0) {
+-       } else if (offsetLocal > 0) {
+            long prev = previousTransition(instantAdjusted);

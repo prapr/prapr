@@ -1,0 +1,9 @@
+Index: org/jfree/chart/renderer/GrayPaintScale.java
+===================================================
+++ org/jfree/chart/renderer/GrayPaintScale.java
+-- org/jfree/chart/renderer/GrayPaintScale.java
+@@ +125,8 -125,8 @@
+	double v = Math.max(value, this.lowerBound);
++	value = Math.min(v, this.upperBound);
+-       v = Math.min(v, this.upperBound);
+        int g = (int) ((value - this.lowerBound) / (this.upperBound - this.lowerBound) * 255.0);

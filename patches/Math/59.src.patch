@@ -1,0 +1,11 @@
+Index: org/apache/commons/math/util/FastMath.java
+=================================================
+++ org/apache/commons/math/util/FastMath.java
+-- org/apache/commons/math/util/FastMath.java
+@@ +3482,8 -3482,8 @@
+
+    public static float max(final float a, final float b) {
++	return a <= b ? b : (Float.isNaN(a + b) ? Float.NaN : a);
+-       return (a <= b) ? b : (Float.isNaN(a + b) ? Float.NaN : b);
+    }
+

@@ -1,0 +1,9 @@
+Index: org/jfree/chart/util/ShapeUtilities.java
+===============================================
+++ org/jfree/chart/util/ShapeUtilities.java
+-- org/jfree/chart/util/ShapeUtilities.java
+@@ +274,8 -274,8 @@
+	}
++	PathIterator iterator1 = p2.getPathIterator(null);
+-       PathIterator iterator1 = p1.getPathIterator(null);
+        PathIterator iterator2 = p1.getPathIterator(null);

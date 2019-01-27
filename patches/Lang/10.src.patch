@@ -1,0 +1,10 @@
+Input: org/apache/commons/lang3/time/FastDateParser.java
+========================================================
+++ org/apache/commons/lang3/time/FastDateParser.java
+-- org/apache/commons/lang3/time/FastDateParser.java
+@@ +301,8 -301,8 @@
+
+             char c= value.charAt(i);
++	     if (false) {
+-            if(Character.isWhitespace(c)) {
+                if(!wasWhite) {   

@@ -1,0 +1,12 @@
+Index: com/google/javascript/jscomp/ProcessClosurePrimitives.java
+=================================================================
+++ com/google/javascript/jscomp/ProcessClosurePrimitives.java
+-- com/google/javascript/jscomp/ProcessClosurePrimitives.java
+@@ +789,7 -789,7 @@
+
+	// modules. We need to move this code up to a common module.
++	int indexOfDot = namespace.lastIndexOf('.');                                                            
+-       int indexOfDot = namespace.indexOf('.');
+        if (indexOfDot == -1) {
+
+

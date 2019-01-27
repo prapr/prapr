@@ -1,0 +1,98 @@
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.2.1'
+}
+
+allprojects {
+    group 'com.binarymonks.jj'
+    version '1.0-SNAPSHOT'
+
+    ext {
+        gdxVersion = '1.9.6'
+        box2DLightsVersion = '1.4'
+        junitVersion = '4.12'
+        kotlinVersion = '1.1.50'
+    }
+
+    repositories {
+        mavenCentral()
+        mavenLocal()
+        jcenter()
+    }
+}
+
+buildscript {
+    ext.kotlinVersion = '1.1.50'
+
+    repositories {
+        /*ATTENTION: YOU MIGHT WANT TO CHANGE THIS IN CASE YOU HAVE
+        DOWNLOADED THE JAR FILE FOR THE PRAPR GRADLE PLUGIN SOMEWHERE ELSE*/
+        flatDir { dir '../../../prapr-gradle-plugin/' }
+        mavenCentral()
+	mavenLocal()
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        classpath 'org.mudebug.gradle.prapr:prapr-gradle-plugin:2.0.0'
+        classpath 'org.mudebug:prapr-core:2.0.0'
+        classpath 'org.mudebug:prapr-entry:2.0.0'
+        classpath 'org.mudebug:prapr-command-line:2.0.0'
+        classpath 'org.mudebug:prapr-html-report:2.0.0'
+    }
+}
+
+project(":jenjin-core") {
+    apply plugin: 'kotlin'
+    apply plugin: 'maven-publish'
+    apply plugin: 'idea'
+    apply plugin: 'org.mudebug.prapr'
+
+    prapr {
+        threads = 2
+        outputFormats = ['LOG', 'HTML'/*, COMPRESSED-XML*/]
+    }
+
+    sourceCompatibility = '1.8'
+
+    dependencies {
+        compile fileTree(dir: '../libs', include: '*.jar')
+        compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+        compile "org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion"
+        compile "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
+        compile "com.badlogicgames.gdx:gdx:$gdxVersion"
+        compile "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
+        compile "com.badlogicgames.gdx:gdx-controllers:$gdxVersion"
+        compile "com.badlogicgames.box2dlights:box2dlights:$box2DLightsVersion"
+        testCompile "junit:junit:$junitVersion"
+        testCompile "org.mockito:mockito-core:1.9.5"
+    }
+}
+
+project(":jenjin-spine") {
+    apply plugin: 'kotlin'
+    apply plugin: 'java'
+    apply plugin: 'maven-publish'
+    apply plugin: 'idea'
+
+    sourceCompatibility = '1.8'
+
+    dependencies {
+        compile project(":jenjin-core")
+        compile "com.badlogicgames.gdx:gdx:$gdxVersion"
+        compile "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
+    }
+}
+
+project(":jenjin-demo") {
+    apply plugin: "kotlin"
+
+    dependencies {
+        compile project(":jenjin-core")
+        compile project(":jenjin-spine")
+        compile "com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion"
+        compile "com.badlogicgames.gdx:gdx-controllers-desktop:$gdxVersion"
+        compile "com.badlogicgames.gdx:gdx-controllers-platform:$gdxVersion:natives-desktop"
+        compile "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+        compile "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-desktop"
+    }
+}

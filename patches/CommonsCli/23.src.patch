@@ -1,0 +1,12 @@
+Index: org/apache/commons/cli/Util.java
+=======================================
+++ org/apache/commons/cli/Util.java
+-- org/apache/commons/cli/Util.java
+@@ -34,4 +34,7 @@
+     static String stripLeadingHyphens(String str)                                                                               
+     {                                                                                                                           
++        if (str == null) {                                                                                                      
++            return null;                                                                                                        
++        }                                                                                                                       
+         if (str.startsWith("--"))                                                                          
+                                                             

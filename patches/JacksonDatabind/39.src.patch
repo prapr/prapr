@@ -1,0 +1,10 @@
+Index: com/fasterxml/jackson/databind/introspect/AnnotationMap.java
+===================================================================
+++ com/fasterxml/jackson/databind/introspect/AnnotationMap.java
+-- com/fasterxml/jackson/databind/introspect/AnnotationMap.java
+@@ -110,3 +110,3 @@
+         }                                                                                                                       
+         Annotation previous = _annotations.put(ann.annotationType(), ann);                                                      
++        return (previous == null) || !previous.equals(ann);                                                                     
+-        return (previous != null) && previous.equals(ann);                                                                      
+     }

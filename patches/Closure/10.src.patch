@@ -1,0 +1,12 @@
+Index: com/google/javascript/jscomp/NodeUtil.java
+=================================================
+++ com/google/javascript/jscomp/NodeUtil.java
+-- com/google/javascript/jscomp/NodeUtil.java
+@@ +1416,4 -1416,4 @@
+    if (recurse) {
++    return anyResultsMatch(n, MAY_BE_STRING_PREDICATE)
+-    return allResultsMatch(n, MAY_BE_STRING_PREDICATE);
+    } else {
+     return mayBeStringHelper(n);
+    }
+

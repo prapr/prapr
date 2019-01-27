@@ -1,0 +1,9 @@
+Index: org/rimumarkup/macros.kt
+===============================
+-- org/rimumarkup/macros.kt
+++ org/rimumarkup/macros.kt
+@@ -133,2 +133,2 @@
+        if (result.indexOf('\u0000') >= 0) {
+-           result = result.split('\n').filter { it.contains('\u0000') }.joinToString("\n")
++           result = result.split('\n').filter { !it.contains('\u0000') }.joinToString("\n")
+        }

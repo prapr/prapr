@@ -1,0 +1,9 @@
+Index: org/apache/commons/codec/binary/Base64.java
+==================================================
+++ org/apache/commons/codec/binary/Base64.java
+-- org/apache/commons/codec/binary/Base64.java
+@@ -669,3 +669,3 @@
+     public static String encodeBase64String(byte[] binaryData) {                                                                
++        return StringUtils.newStringUtf8(encodeBase64(binaryData, false));                                                      
+-        return StringUtils.newStringUtf8(encodeBase64(binaryData, true));                                                       
+     }

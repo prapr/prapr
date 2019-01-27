@@ -1,0 +1,10 @@
+Index: com/google/javascript/jscomp/LightweightMessageFormatter.java
+====================================================================
+++ com/google/javascript/jscomp/LightweightMessageFormatter.java
+-- com/google/javascript/jscomp/LightweightMessageFormatter.java
+@@ +97,6 -97,6 @@
+
+      // at the end of the line
++     if (excerpt.equals(SourceExcerpt.LINE) && 0 <= charno && charno <= sourceExcerpt.length()) {                               
+-     if (excerpt.equals(LINE) && 0 <= charno && charno < sourceExcerpt.length()) {
+        for (int i = 0; i < charno; i++) {

@@ -1,0 +1,11 @@
+Index: org/mockito/internal/matchers/Same.java
+==============================================
+++ org/mockito/internal/matchers/Same.java
+-- org/mockito/internal/matchers/Same.java
+@@ +29,8 -29,8 @@
+
+        appendQuoting(description);
++	description.appendText(wanted == null ? null : wanted.toString());
+-       description.appendText(wanted.toString());
+        appendQuoting(description);
+

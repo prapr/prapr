@@ -1,0 +1,10 @@
+Index: uk/co/thinkofdeath/patchtools/ClassSet.java
+==================================================
+-- uk/co/thinkofdeath/patchtools/ClassSet.java
+++ uk/co/thinkofdeath/patchtools/ClassSet.java
+@@ -55,1 +55,4 @@
+        ClassWrapper wrapper = classes.get(name);
++	if (wrapper == null) {
++	   return null;
++	}
+        if (wrapper.isHidden()) {

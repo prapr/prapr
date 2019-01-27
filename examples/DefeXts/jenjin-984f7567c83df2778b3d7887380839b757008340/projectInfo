@@ -1,0 +1,11 @@
+projectName=jenjin
+commitURL=https://github.com/laurencegw/jenjin/commit/984f7567c83df2778b3d7887380839b757008340
+modifiedSourceFiles=[
+jenjin-core/src/main/kotlin/com/binarymonks/jj/core/components/Component.kt
+jenjin-core/src/test/kotlin/com/binarymonks/jj/core/components/ComponentTest.kt
+jenjin-core/src/test/kotlin/com/binarymonks/jj/core/components/fsm/StateMachineTest.kt
+]
+modifiedTestFiles=[
+jenjin-core/src/test/kotlin/com/binarymonks/jj/core/components/ComponentTest.kt
+jenjin-core/src/test/kotlin/com/binarymonks/jj/core/components/fsm/StateMachineTest.kt
+]

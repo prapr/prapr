@@ -1,0 +1,10 @@
+Index: com/frankandrobot/rapier/util/BoundedBinaryHeap.kt
+=========================================================
+-- com/frankandrobot/rapier/util/BoundedBinaryHeap.kt
+++ com/frankandrobot/rapier/util/BoundedBinaryHeap.kt
+@@ -41,2 +41,2 @@
+
+-   if (lastItemIndex >= 0) {
++   if (lastItemIndex > 0) {
+
+    val root = array[1]

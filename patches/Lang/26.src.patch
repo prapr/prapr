@@ -1,0 +1,10 @@
+Input: org/apache/commons/lang3/time/FastDateFormat.java
+========================================================
+++ org/apache/commons/lang3/time/FastDateFormat.java
+-- org/apache/commons/lang3/time/FastDateFormat.java
+@@ +817,7 -817,7 @@
+
+     public String format(Date date) {                                                                                           
++        Calendar c = new GregorianCalendar(mTimeZone, mLocale);                                                                 
+-        Calendar c = new GregorianCalendar(mTimeZone);                                                                          
+         c.setTime(date);

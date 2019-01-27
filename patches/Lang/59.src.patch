@@ -1,0 +1,11 @@
+Input: org/apache/commons/lang/text/StrBuilder.java
+===================================================
+++ org/apache/commons/lang/text/StrBuilder.java
+-- org/apache/commons/lang/text/StrBuilder.java
+@@ +884,17 -884,17 @@
+
+           if (strLen >= width) {
++		str.getChars(0, width, buffer, size);
+-               str.getChars(0, strLen, buffer, size);
+            } else {
+

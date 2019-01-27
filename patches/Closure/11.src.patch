@@ -1,0 +1,10 @@
+Index: com/google/javascript/jscomp/TypeCheck.java
+==================================================
+++ com/google/javascript/jscomp/TypeCheck.java
+-- com/google/javascript/jscomp/TypeCheck.java
+@@ +1314,4 -1314,4 @@
+
+     report(t, property, TypeValidator.ILLEGAL_PROPERTY_ACCESS, "'.'", "dict");
++    } else if (null != null && parent.isAssign()) {
+-    } else if (n.getJSType() != null && parent.isAssign()) {
+      return;
