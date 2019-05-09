@@ -31,6 +31,8 @@ system, we have also included a Gradle plugin for PraPR which we are going to ex
 ## PraPR Setup
 PraPR can be used in two convenient forms: as a [Maven plugin](#maven-plugin) or as a [Gradle plugin](#maven-plugin).
 
+*Note for ISSTA Artifacts Evaluation Reviewers: we suggest you use our Docker image attached in our artifact submission.*
+
 ### Maven Plugin
 PraPR is available on [Maven Central Repository](https://repo.maven.apache.org/maven2/) in the form of a Maven
 plugin. You can obtain the plugin for PraPR by just configuring your target POM file.
