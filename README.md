@@ -7,15 +7,17 @@
 - [PraPR Setup](#prapr-setup)
     * [Maven Plugin](#maven-plugin)
     * [Gradle Plugin](#gradle-plugin)
+    * [Docker Image](#docker-image)
 - [PraPR Demonstration](#prapr-demonstration)
     * [Fixing Lang-33 from Defects4J](#fixing-lang-33-from-defects4j)
-    * [Fixing jejin-984f75 from DefeXts](#fixing-jejin-984f7567-from-defexts)
+    * [Fixing jejin-984f75 from Defexts](#fixing-jejin-984f7567-from-defexts)
     * [Fixing Toy Programs](#fixing-toy-programs)
 - [PraPR Reports](#prapr-reports)
     * [Dumped Mutants](#dumped-mutants)
     * [Configuring Eclipse Class Decompiler](#configuring-eclipse-class-decompiler)
 - [PraPR Patches](#prapr-patches)
 - [System Requirements](#system-requirements)
+- [Publication](#publication)
 
 ## Introduction
 
@@ -29,9 +31,8 @@ Maven-based Kotlin project. However, since most of the times Kotlin developers t
 system, we have also included a Gradle plugin for PraPR which we are going to explain in this document.
 
 ## PraPR Setup
-PraPR can be used in two convenient forms: as a [Maven plugin](#maven-plugin) or as a [Gradle plugin](#maven-plugin).
-
-**Note for ISSTA Artifact Evaluation Reviewers: We suggest you use our Docker image attached in our artifact submission.**
+PraPR can be used in two main forms: as a [Maven plugin](#maven-plugin) or as a [Gradle plugin](#maven-plugin).
+In order to facilitate demonstration, we have also prepared a [Docker image](#docker-image) through which the users can try PraPR.
 
 ### Maven Plugin
 PraPR is available on [Maven Central Repository](https://repo.maven.apache.org/maven2/) in the form of a Maven
@@ -148,6 +149,41 @@ dependencies {
 ```
 After configuring the build file you can invoke PraPR by using the command `gradle prapr-repair` in the
 command-line at the root of the project.
+### Docker Image
+We have shipped a pre-configured form of PraPR in the form of a Docker image ([https://hub.docker.com/r/prapr/prapr](https://hub.docker.com/r/prapr/prapr)). Using this image the user will have access to PraPR and all the bugs that we have tested PraPR with.
+
+In order to be able to use Docker, you need to have an instance of Docker installed on your computer. Please follow the [installation instructions](https://docs.docker.com/v17.12/install/) for your operating system, and install Docker on your computer.
+
+Once you installed Docker, before trying the following commands, please make sure that it is running and is ready to be used.
+```sh
+docker logout
+docker container run -it prapr/prapr
+```
+These commands will fetch PraPR image and run the container.
+Please note that the first command is necessary for newer versions of Docker.
+Note further that Linux users have to run these commands as a sudoer, meaning
+that they need to stick a `sudo` in front of the aforementioned commands.
+
+After downloading the image, the system will automatically begin executing the PraPR image,
+which is a pre-configured Ubuntu Linux. Once started, the system will be redirected to
+`/home/prapr/`. We have provided two commands using which the users can fetch a
+Defect4J (or Defexts) bug, or invoke PraPR. The following command shall invoke PraPR wrapper
+and show all the bugs ids that this Docker image recognizes.
+```sh
+prapr-fix --all-bugs
+```
+Bug ids are in the form of `subject-bug` where `subject` is the subject project name
+(e.g. `Chart`, `Time`, etc.), and `bug` is the bug number. For example, `Lang-10` identifies
+the bug Lang-10 from Defects4J. Once we know the bug ids, we can invoke PraPR on the bug
+using the following command.
+```sh
+prapr-fix subject-bug
+```
+This command downloads the designated bug, before configuring and invoking PraPR on it.
+For example, `prapr-fix Lang-10` downloads the bug Lang-10, and applies PraPR on it.
+
+We can use the command `checkout subject-bug` to download the bug without invoking PraPR.
+All the downloaded bugs will be stored in the home directory of the container at `/home/prapr`.
 
 ## PraPR Demonstration
 We have prepared two real-world programs (one Java and one Kotlin) and two toy programs (one Java and one Kotlin). 
@@ -188,7 +224,7 @@ list of fixes. You might also want to use the visualized report by opening `inde
 Please refer to the Secion [Reporting](#prapr-reports) for more information about fix reports. You can find
 dumped mutations under the subdirectory `pool`. With the help of the LOG file and a decompiler installed on
 your favorite IDE, you can see how patches can be applied in the source code.
-### Fixing jejin-984f7567 from DefeXts
+### Fixing jejin-984f7567 from Defexts
 jejin is a large, real-world Gradle-based Kotlin program that contains more than 9700 lines of code all in
 Kotlin. The bug jejin-984f7567 is fixable by replacing
 ```kotlin
@@ -210,7 +246,7 @@ In order to fix this program using the following commands (please note that jeji
 4.9 to work)
 ```sh
 cd examples
-cd DefeXts
+cd Defexts
 cd jenjin-984f7567c83df2778b3d7887380839b757008340
 gradle clean build -x test
 gradle prapr-repair
@@ -296,10 +332,28 @@ plausible patch that we believe they are genuine fixes (almost all of them are s
 programmer-written patches and reasoning about those patches that are not syntactically the same is quite easy).
 These patches are located under the subdirectory `patches` of this repository. Please note that programmer-written
 patches are already shipped with [Defects4J](https://github.com/Greg4cr/defects4j/tree/additional-faults-1.4) and
-[DefeXts](http://www.github.com/defexts/defexts) and reviewers can refer to those.
+[Defexts](http://www.github.com/defexts/defexts) and reviewers can refer to those.
 
 ## System Requirements
 * OS: Ubuntu Linux or Mac OS X.
 * Build System: Maven 3.2+ or Gradle 4.8+.
-* JDK: Oracle Java SE Development Kit 7u80 (recommended for Defects4J) and 8u171 (recommended for DefeXts).
+* JDK: Oracle Java SE Development Kit 7u80 (recommended for Defects4J) and 8u171 (recommended for Defexts).
 * IDE: Eclipse Oxygen.
+
+## Publication
+PraPR is a research project and part of [Ali Ghanbari](https://ali-ghanbari.github.io/)'s Ph.D. thesis at [The University of Texas at Dallas](https://www.utdallas.edu/).
+This thesis is being supervised by [Dr. Lingming Zhang](https://www.utdallas.edu/~lxz144130/).
+The paper that introduces the idea of PraPR, and conducts and extensive empirical study on state-of-the-art APR techniques,
+has been accepted for publication in the technical track of 28th ACM SIGSOFT International Symposium on Software
+Testing and Analysis (**ISSTA 2019**). Please use the following BibTeX snippet in case you wish to cite our work.
+```
+@inproceedings{bib:GBZ19,
+  title		= {Practical Program Repair via Bytecode Mutation},
+  author	= {Ghanbari, Ali and Benton, Samuel and Zhang, Lingming},
+  booktitle	= {ISSTA},
+  year		= {2019},
+  location	= {Beijin, China},
+  doi		= {10.1145/3293882.3330559},
+  note		= {to appear}
+}
+```
