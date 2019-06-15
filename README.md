@@ -150,23 +150,24 @@ dependencies {
 After configuring the build file you can invoke PraPR by using the command `gradle prapr-repair` in the
 command-line at the root of the project.
 ### Docker Image
-We have shipped a pre-configured form of PraPR in the form of a Docker image ([https://hub.docker.com/r/prapr/prapr](https://hub.docker.com/r/prapr/prapr)). Using this image the user will have access to PraPR and all the bugs that we have tested PraPR with.
+We have shipped a pre-configured version of PraPR in the form of a Docker image ([https://hub.docker.com/r/prapr/prapr](https://hub.docker.com/r/prapr/prapr)). Using this image the users will have access to PraPR and all the bugs that we have tested PraPR with.
 
-In order to be able to use Docker, you need to have an instance of Docker installed on your computer. Please follow the [installation instructions](https://docs.docker.com/v17.12/install/) for your operating system, and install Docker on your computer.
+In order to be able to use our Docker image, you need to have an instance of Docker installed on your computer.
+Please follow the [installation instructions](https://docs.docker.com/v17.12/install/) specific to your operating system,
+and install Docker on your computer.
 
 Once you installed Docker, before trying the following commands, please make sure that it is running and is ready to be used.
 ```sh
-docker logout
-docker container run -it prapr/prapr
+sudo docker logout
+sudo docker container run -it prapr/prapr
 ```
 These commands will fetch PraPR image and run the container.
 Please note that the first command is necessary for newer versions of Docker.
-Note further that Linux users have to run these commands as a sudoer, meaning
-that they need to stick a `sudo` in front of the aforementioned commands.
+Note further that Mac OS or Windows users do not need to prefix the commands with `sudo`.
 
 After downloading the image, the system will automatically begin executing the PraPR image,
-which is a pre-configured Ubuntu Linux. Once started, the system will be redirected to
-`/home/prapr/`. We have provided two commands using which the users can fetch a
+which is a pre-configured Ubuntu Linux. Once started, the system will automatically be redirected to
+`/home/prapr/`. We have provided the users with two commands using which they can fetch a
 Defect4J (or Defexts) bug, or invoke PraPR. The following command shall invoke PraPR wrapper
 and show all the bugs ids that this Docker image recognizes.
 ```sh
@@ -174,8 +175,8 @@ prapr-fix --all-bugs
 ```
 Bug ids are in the form of `subject-bug` where `subject` is the subject project name
 (e.g. `Chart`, `Time`, etc.), and `bug` is the bug number. For example, `Lang-10` identifies
-the bug Lang-10 from Defects4J. Once we know the bug ids, we can invoke PraPR on the bug
-using the following command.
+the bug Lang-10 from Defects4J (we stress that the wrapper script is case sensitive).
+Once we know the bug ids, we can invoke PraPR on the bug using the following command.
 ```sh
 prapr-fix subject-bug
 ```
@@ -184,6 +185,13 @@ For example, `prapr-fix Lang-10` downloads the bug Lang-10, and applies PraPR on
 
 We can use the command `checkout subject-bug` to download the bug without invoking PraPR.
 All the downloaded bugs will be stored in the home directory of the container at `/home/prapr`.
+
+*Note*: Except for `Closure` bugs (and a number of `Math` bugs), PraPR needs less than 16 GB of RAM.
+Some `Closure` bugs might need up to 64 GB of RAM.
+
+*Note*: The Linux that we have shipped takes some space on your disk. Also downloading the bugs, and
+trying them, will quickly add up. So, please make sure that you have at least 50 GB of free space on
+your root drive (`/` on Unix, and `C:` on Windows, systems).
 
 ## PraPR Demonstration
 We have prepared two real-world programs (one Java and one Kotlin) and two toy programs (one Java and one Kotlin). 
@@ -357,3 +365,4 @@ Testing and Analysis (**ISSTA 2019**). Please use the following BibTeX snippet i
   note		= {to appear}
 }
 ```
+You can obtain a pre-print of the paper by using the following links: [Link 1](https://ali-ghanbari.github.io/publications/issta19.pdf) or [Link 2](https://www.utdallas.edu/~lxz144130/publications/issta2019a.pdf).
