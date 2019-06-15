@@ -357,7 +357,7 @@ patches are already shipped with [Defects4J](https://github.com/Greg4cr/defects4
 ## Publication
 PraPR is a research project and part of [Ali Ghanbari](https://ali-ghanbari.github.io/)'s Ph.D. thesis at [The University of Texas at Dallas](https://www.utdallas.edu/).
 This thesis is being supervised by [Dr. Lingming Zhang](https://www.utdallas.edu/~lxz144130/).
-The paper that introduces the idea of PraPR, and conducts and extensive empirical study on state-of-the-art APR techniques,
+The paper that introduces the idea of PraPR, and conducts an extensive empirical study on state-of-the-art APR techniques,
 has been accepted for publication in the technical track of 28th ACM SIGSOFT International Symposium on Software
 Testing and Analysis (**ISSTA 2019**). Please use the following BibTeX snippet in case you wish to cite our work.
 ```
