@@ -150,7 +150,9 @@ dependencies {
 After configuring the build file you can invoke PraPR by using the command `gradle prapr-repair` in the
 command-line at the root of the project.
 ### Docker Image
-We have shipped a pre-configured version of PraPR in the form of a Docker image ([https://hub.docker.com/r/prapr/prapr](https://hub.docker.com/r/prapr/prapr)). Using this image the users will have access to PraPR and all the bugs that we have tested PraPR with.
+The easiest way to try PraPR is to use our Docker image. We have shipped a pre-configured
+version of PraPR in the form of a Docker image ([https://hub.docker.com/r/prapr/prapr](https://hub.docker.com/r/prapr/prapr)).
+Using this image the users will have access to PraPR and all the bugs that we have tested PraPR with.
 
 In order to be able to use our Docker image, you need to have an instance of Docker installed on your computer.
 Please follow the [installation instructions](https://docs.docker.com/v17.12/install/) specific to your operating system,
@@ -161,10 +163,14 @@ Once you installed Docker, before trying the following commands, please make sur
 sudo docker logout
 sudo docker container run -it prapr/prapr
 ```
-These commands will fetch PraPR image and run the container.
+These commands (that are intended to be executed on a Linux terminal) will fetch PraPR image and run the container.
 Please note that the first command is necessary for newer versions of Docker.
-Note further that Mac OS or Windows users do not need to prefix the commands with `sudo`.
-
+Note further that Mac OS or Windows users do not need to prefix the commands with `sudo`;
+they can simply use the following commands to get PraPR running.
+```sh
+docker logout
+docker container run -it prapr/prapr
+```
 After downloading the image, the system will automatically begin executing the PraPR image,
 which is a pre-configured Ubuntu Linux. Once started, the system will automatically be redirected to
 `/home/prapr/`. We have provided the users with two commands using which they can fetch a
