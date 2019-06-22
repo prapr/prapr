@@ -22,8 +22,7 @@
 ## Introduction
 
 PraPR is a simplistic, yet effective, automatic program repair (APR) technique based on simple mutation operators.
-This repository is created for the reviewers of our ISSTA'19 submission to get a feeling of how it looks like to work
-with PraPR. This document, besides explaining how one can use PraPR, presents the main features of the tool.
+This repository is the official website for PraPR. This document, besides explaining how one can use PraPR, presents the main features of the tool.
 
 We reiterate that PraPR, being a JVM bytecode-level APR, is able to fix JVM programming languages other than Java.
 Most of these languages (including Kotlin) are compatible with Maven, so our Maven plugin could be used for any
