@@ -360,14 +360,22 @@ The paper that introduces the idea of PraPR, and conducts an extensive empirical
 has been accepted for publication in the technical track of 28th ACM SIGSOFT International Symposium on Software
 Testing and Analysis (**ISSTA 2019**). Please use the following BibTeX snippet in case you wish to cite our work.
 ```
-@inproceedings{bib:GBZ19,
-  title		= {Practical Program Repair via Bytecode Mutation},
-  author	= {Ghanbari, Ali and Benton, Samuel and Zhang, Lingming},
-  booktitle	= {ISSTA},
-  year		= {2019},
-  location	= {Beijin, China},
-  doi		= {10.1145/3293882.3330559},
-  note		= {to appear}
+@inproceedings{GBZ19,
+ author = {Ghanbari, Ali and Benton, Samuel and Zhang, Lingming},
+ title = {Practical Program Repair via Bytecode Mutation},
+ booktitle = {Proceedings of the 28th ACM SIGSOFT International Symposium on Software Testing and Analysis},
+ series = {ISSTA 2019},
+ year = {2019},
+ isbn = {978-1-4503-6224-5},
+ location = {Beijing, China},
+ pages = {19--30},
+ numpages = {12},
+ url = {http://doi.acm.org/10.1145/3293882.3330559},
+ doi = {10.1145/3293882.3330559},
+ acmid = {3330559},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {Fault localization, JVM bytecode, Mutation testing, Program repair},
 }
 ```
 You can obtain a pre-print of the paper by using the following links: [Link 1](https://ali-ghanbari.github.io/publications/issta19.pdf) or [Link 2](https://www.utdallas.edu/~lxz144130/publications/issta2019a.pdf).
