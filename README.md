@@ -17,7 +17,7 @@
     * [Configuring Eclipse Class Decompiler](#configuring-eclipse-class-decompiler)
 - [PraPR Patches](#prapr-patches)
 - [System Requirements](#system-requirements)
-- [Publication](#publication)
+- [Publications](#publication)
 
 ## Introduction
 
@@ -353,11 +353,11 @@ patches are already shipped with [Defects4J](https://github.com/Greg4cr/defects4
 * JDK: Oracle Java SE Development Kit 7u80 (recommended for Defects4J) and 8u171 (recommended for Defexts).
 * IDE: Eclipse Oxygen.
 
-## Publication
+## Publications
 PraPR is a research project and part of [Ali Ghanbari](https://ali-ghanbari.github.io/)'s Ph.D. thesis at [The University of Texas at Dallas](https://www.utdallas.edu/).
 This thesis is being supervised by [Dr. Lingming Zhang](https://www.utdallas.edu/~lxz144130/).
 The paper that introduces the idea of PraPR, and conducts an extensive empirical study on state-of-the-art APR techniques,
-has been accepted for publication in the technical track of 28th ACM SIGSOFT International Symposium on Software
+is accepted for publication in the technical track of 28th ACM SIGSOFT International Symposium on Software
 Testing and Analysis (**ISSTA 2019**). Please use the following BibTeX snippet in case you wish to cite our work.
 ```
 @inproceedings{GBZ19,
@@ -378,4 +378,34 @@ Testing and Analysis (**ISSTA 2019**). Please use the following BibTeX snippet i
  keywords = {Fault localization, JVM bytecode, Mutation testing, Program repair},
 }
 ```
-You can obtain a pre-print of the paper by using the following links: [Link 1](https://ali-ghanbari.github.io/publications/issta19.pdf) or [Link 2](https://www.utdallas.edu/~lxz144130/publications/issta2019a.pdf).
+You can obtain a pre-print of the paper through the links [FULL-PDF-1](https://ali-ghanbari.github.io/publications/issta19.pdf) or [FULL-PDF-2](https://www.utdallas.edu/~lxz144130/publications/issta2019a.pdf).
+
+Our Demo paper has just been accepted for publication in **ASE 2019 Demonstrations** section.
+The paper presents a high-level overview of engineering of PraPR.
+Please use the following BibTeX snippet in case you wish to cite our work.
+```
+@inproceedings{GZ19,
+ author = {Ghanbari, Ali and Zhang, Lingming},
+ title = {PraPR: Practical Program Repair via Bytecode Mutation},
+ booktitle = {Proceedings of the 34th IEEE/ACM International Conference on Automated Software Engineering},
+ series = {ASE 2019},
+ year = {2019},
+ note = {to appear}
+}
+```
+You can obtain a pre-print of the paper through the links [DEMO-PDF-1](https://ali-ghanbari.github.io/publications/ase19-demo-9.pdf) or [DEMO-PDF-2](https://www.utdallas.edu/~lxz144130/publications/ase19-demo-9.pdf).
+
+In another short paper, I have described our long-term goals in automated program repair.
+The paper is accepted for publication in **ASE 2019 SRC** section.
+Please use the following BibTeX snippet in case you wish to cite our work.
+```
+@inproceedings{bib:Ghan19,
+ author = {Ghanbari, Ali},
+ title = {Torward Practical Automatic Program Rerpair},
+ booktitle = {Proceedings of the 34th IEEE/ACM International Conference on Automated Software Engineering},
+ series = {ASE 2019},
+ year = {2019},
+ note = {to appear}
+}
+```
+You can obtain a pre-print of the paper through the link [SRC-PDF](https://ali-ghanbari.github.io/publications/ase19-src-2.pdf).
