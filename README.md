@@ -355,7 +355,7 @@ By default, for each sub-module within a multi-module project, PraPR (similar wi
 <plugin>
 	<groupId>org.mudebug</groupId>
 	<artifactId>prapr-multi-module-maven-plugin</artifactId>
-	<version>1.0.0</version>
+	<version>1.0</version>
 	<configuration>
 		<threads> <!-- NUMBER OF THREADS TO BE USED DURING MUTATION --> </threads>
 		<mutators>
