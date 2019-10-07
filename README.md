@@ -16,8 +16,9 @@
     * [Dumped Mutants](#dumped-mutants)
     * [Configuring Eclipse Class Decompiler](#configuring-eclipse-class-decompiler)
 - [PraPR Patches](#prapr-patches)
+- [PraPR for Multi-module Projects](#prapr-for-multi-module-projects)
 - [System Requirements](#system-requirements)
-- [Publications](#publication)
+- [Publications](#publications)
 
 ## Introduction
 
@@ -346,6 +347,35 @@ programmer-written patches and reasoning about those patches that are not syntac
 These patches are located under the subdirectory `patches` of this repository. Please note that programmer-written
 patches are already shipped with [Defects4J](https://github.com/Greg4cr/defects4j/tree/additional-faults-1.4) and
 [Defexts](http://www.github.com/defexts/defexts) and reviewers can refer to those.
+
+## PraPR for Multi-module Projects
+By default, for each sub-module within a multi-module project, PraPR (similar with PIT) repairs only the classes defined in the same module as the test suite. However, in practice, the tests within a sub-module may test source code defined within another sub-module. We have developed a Maven plugin for that purpose: in order to use PraPR multi-module maven plugin you will need to include the following snippet in the parent POM file.
+
+```xml
+<plugin>
+	<groupId>org.mudebug</groupId>
+	<artifactId>prapr-multi-module-maven-plugin</artifactId>
+	<version>1.0.0</version>
+<plugin>
+```
+
+By having this in the POM file, you can invoke the plugin by runnin the command `mvn org.mudebug:prapr-multi-module-maven-plugin:praprM`. Note that a multi-module project may have a large number of modules, and you do not want to repair all of them (e.g., you only want to repair the ones with test failures). In this way, you can configure the following options to optimize your repair experience:
+
+`targetModules`: running PraPR only on certain target modules (e.g., the modules with test failures). You can simply use it from the command line with `-DtargetModules=firstModule,secondModule`, or from the `pom.xml`:
+```xml
+<targetModules>
+	<param>firstModule</param>
+        <param>secondModule</param>
+</targetModules>
+```
+
+`excludedModules`: filtering our certain modules (e.g., the modules without test failures) for PraPR. You can simply use it from the command line with `-DexcludedModules=firstModule,secondModule`, or from the pom.xml:
+```xml
+<excludedModules>
+	<param>firstModule</param>
+        <param>secondModule</param>
+</excludedModules>
+```
 
 ## System Requirements
 * OS: Ubuntu Linux or Mac OS X.
