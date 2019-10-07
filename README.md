@@ -356,7 +356,26 @@ By default, for each sub-module within a multi-module project, PraPR (similar wi
 	<groupId>org.mudebug</groupId>
 	<artifactId>prapr-multi-module-maven-plugin</artifactId>
 	<version>1.0.0</version>
-<plugin>
+	<configuration>
+		<threads> <!-- NUMBER OF THREADS TO BE USED DURING MUTATION --> </threads>
+		<mutators>
+                <!-- <mutator>ALL</mutator> ACTIVATES ALL THE AVAILABLE MUTATORS -->
+		<!-- OR YOU CAN SELECTIVELY ACTIVATE THE MUTATORS BY LISTING THEIR IDENTIFIERS HERE -->
+                <!-- <mutator>PIT</mutator> ACTIVATES TRADITIONAL MUTATORS -->
+                <!-- <mutator>PRAPR</mutator> ACTIVATES ALL THE MUTATORS SPECIFIC TO PRAPR -->
+		</mutators>
+		<outputFormats>
+			<!-- YOU CAN DETERMINE FORMAT OF THE FIX REPORT HERE -->
+			<!-- <param>COMPRESSED-XML</param> SUITABLE FOR POST PROCESSING -->
+			<!-- <param>LOG</param> HUMAN READABLE RANKED LIST -->
+			<!-- <param>HTML</param> HUMAN READABLE VISUALIZED REPORT -->
+		</outputFormats>
+            	<testPlugin>
+		<!-- COULD BE "junit" (default), "testng", or "junit5" -->
+            	</testPlugin>
+        	<!-- ET CETERA -->
+	</configuration>
+</plugin>
 ```
 
 By having this in the POM file, you can invoke the plugin by runnin the command `mvn org.mudebug:prapr-multi-module-maven-plugin:praprM`. Note that a multi-module project may have a large number of modules, and you do not want to repair all of them (e.g., you only want to repair the ones with test failures). In this way, you can configure the following options to optimize your repair experience:
