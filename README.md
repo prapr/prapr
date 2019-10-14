@@ -47,7 +47,7 @@ following snippet in the POM file for the target program:
 	<plugin>
 		<groupId>org.mudebug</groupId>
 		<artifactId>prapr-plugin</artifactId>
-		<version>2.0.1</version>
+		<version>2.0.2</version>
 		<configuration>
 			<threads> <!-- NUMBER OF THREADS TO BE USED DURING MUTATION --> </threads>
 			<mutators>
@@ -116,7 +116,7 @@ Note that a multi-module project may have a large number of modules, and you do 
 </targetModules>
 ```
 
-`excludedModules`: filtering our certain modules (e.g., the modules without test failures) for PraPR. You can simply use it from the command line with `-DexcludedModules=firstModule,secondModule`, or from the `pom.xml`:
+`excludedModules`: filtering out certain modules (e.g., the modules without test failures) for PraPR. You can simply use it from the command line with `-DexcludedModules=firstModule,secondModule`, or from the `pom.xml`:
 
 ```xml
 <excludedModules>
