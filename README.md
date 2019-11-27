@@ -1,5 +1,7 @@
 [![Maven Central](https://img.shields.io/maven-central/v/org.mudebug/prapr-plugin.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22org.mudebug%22%20AND%20a:%22prapr-plugin%22)
 
+> ##### Source code of PraPR is now available at [PraPR-SC](https://github.com/ali-ghanbari/prapr-sc).
+
 # PraPR: Practical Program Repair via Bytecode Mutation
 
 ## Table of Contents
@@ -18,6 +20,7 @@
 - [PraPR Patches](#prapr-patches)
 - [System Requirements](#system-requirements)
 - [Publications](#publications)
+    * [PraPR on YouTube](#prapr-on-youtube)
 
 ## Introduction
 
@@ -382,7 +385,6 @@ patches are already shipped with [Defects4J](https://github.com/Greg4cr/defects4
 
 ## Publications
 PraPR is a research project and part of [Ali Ghanbari](https://ali-ghanbari.github.io/)'s Ph.D. thesis at [The University of Texas at Dallas](https://www.utdallas.edu/).
-This thesis is being supervised by [Dr. Lingming Zhang](https://www.utdallas.edu/~lxz144130/).
 The paper that introduces the idea of PraPR, and conducts an extensive empirical study on state-of-the-art APR techniques,
 is accepted for publication in the technical track of 28th ACM SIGSOFT International Symposium on Software
 Testing and Analysis (**ISSTA 2019**). Please use the following BibTeX snippet in case you wish to cite our work.
@@ -436,3 +438,6 @@ Please use the following BibTeX snippet in case you wish to cite our work.
 }
 ```
 You can obtain a pre-print of the paper through the link [SRC-PDF](https://ali-ghanbari.github.io/publications/ase19-src-2.pdf).
+
+### PraPR on YouTube
+As part of the artifact evaluation process for our ISSTA'19 paper, we have released a [YouTube video](https://www.youtube.com/watch?v=A4EBfkdwRFg) demonstraing how to use the Docker image for PraPR.
