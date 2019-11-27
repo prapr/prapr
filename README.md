@@ -384,8 +384,7 @@ patches are already shipped with [Defects4J](https://github.com/Greg4cr/defects4
 * IDE: Eclipse Oxygen.
 
 ## Publications
-PraPR is a research project and part of [Ali Ghanbari](https://ali-ghanbari.github.io/)'s Ph.D. thesis at [The University of Texas at Dallas](https://www.utdallas.edu/). The paper that introduces the idea of PraPR, and conducts an extensive empirical study on state-of-the-art APR techniques, is published in the technical track of 28th ACM SIGSOFT International Symposium on Software
-Testing and Analysis (**ISSTA 2019**). Please use the following BibTeX snippet in case you wish to cite our work.
+PraPR is a research project and part of [Ali Ghanbari](https://ali-ghanbari.github.io/)'s Ph.D. thesis at [The University of Texas at Dallas](https://www.utdallas.edu/). The paper that introduces the idea of PraPR, and conducts an extensive empirical study on state-of-the-art APR techniques, is published in the technical track of 28th ACM SIGSOFT International Symposium on Software Testing and Analysis (**ISSTA 2019**). Please use the following BibTeX snippet in case you wish to cite our work.
 ```
 @inproceedings{GBZ19,
  author = {Ghanbari, Ali and Benton, Samuel and Zhang, Lingming},
@@ -405,7 +404,7 @@ Testing and Analysis (**ISSTA 2019**). Please use the following BibTeX snippet i
  keywords = {Fault localization, JVM bytecode, Mutation testing, Program repair},
 }
 ```
-You can obtain a pre-print of the paper through the links [FULL-PDF-1](https://ali-ghanbari.github.io/publications/issta19.pdf) or [FULL-PDF-2](https://www.utdallas.edu/~lxz144130/publications/issta2019a.pdf).
+You can obtain a copy of the paper through the link [FULL-PDF](https://ali-ghanbari.github.io/publications/issta19.pdf).
 
 Our Demo paper has just been accepted for publication in **ASE 2019 Demonstrations** section.
 The paper presents a high-level overview of engineering of PraPR.
@@ -420,7 +419,7 @@ Please use the following BibTeX snippet in case you wish to cite our work.
  note = {to appear}
 }
 ```
-You can obtain a pre-print of the paper through the links [DEMO-PDF-1](https://ali-ghanbari.github.io/publications/ase19-demo-9.pdf) or [DEMO-PDF-2](https://www.utdallas.edu/~lxz144130/publications/ase19-demo-9.pdf).
+You can obtain a copy of the paper through the link [DEMO-PDF-1](https://ali-ghanbari.github.io/publications/ase19-demo-9.pdf).
 
 In another short paper, I have described our long-term goals in automated program repair.
 The paper is accepted for publication in **ASE 2019 SRC** section.
