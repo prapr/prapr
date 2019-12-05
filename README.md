@@ -43,8 +43,18 @@ plugin. You can obtain the plugin for PraPR by just configuring your target POM 
 In order to see how PraPR works, you will need a buggy program. We have prepared four of them for your convenience;
 they are located in the subdirectory `examples`. Before giving the instructions special to the example programs,
 let's see how we can configure a buggy program so that PraPR can fix it. We need to stress that the program, in order
-to be fixed by PraPR, has to have a test suite with at least one failing test case. All you need to do is to add the
-following snippet in the POM file for the target program:
+to be fixed by PraPR, has to have a test suite with at least one failing test case. Running PraPR with its default options
+is as simple as adding the following snippet in the POM file for the target program:
+```xml
+<plugins>
+	<plugin>
+		<groupId>org.mudebug</groupId>
+		<artifactId>prapr-plugin</artifactId>
+		<version>2.0.2</version>
+	</plugin>
+</plugins>
+```
+You can also customize PraPR's behavior by using the following template.
 ```xml
 <plugins>
 	<plugin>
