@@ -275,7 +275,7 @@ appropriate plausible fix. The reports, as well as all the supporting informatio
 directory `{$project.base}/target/prapr-reports/*/`, where `*` is a number representing the time and date at
 which the tool is ran. Under that directory you can find `fix-report.log` which is a human readable, ranked
 list of fixes. You might also want to use the visualized report by opening `index.html` in a web-browser.
-Please refer to the Secion [Reporting](#prapr-reports) for more information about fix reports. You can find
+Please refer to the Section [Reporting](#prapr-reports) for more information about fix reports. You can find
 dumped mutations under the subdirectory `pool`. With the help of the LOG file and a decompiler installed on
 your favorite IDE, you can see how patches can be applied in the source code.
 ### Fixing jejin-984f7567 from Defexts
